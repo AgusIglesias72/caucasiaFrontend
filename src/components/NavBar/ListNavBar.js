@@ -14,7 +14,7 @@ const ListNavBar = ({ navclass, classtype, closeMenu }) => {
     { name: "Contacto", ref: "Contacto" },
   ];
 
-  const loged = JSON.parse(localStorage.getItem("user"));
+  const loged = JSON.parse(sessionStorage.getItem("user"));
   console.log(loged);
 
   return (
@@ -29,7 +29,7 @@ const ListNavBar = ({ navclass, classtype, closeMenu }) => {
           </NavLink>
         ))}
       </ul>
-      {localStorage.getItem("user") ? (
+      {sessionStorage.getItem("user") ? (
         <NavLink to="/">
           <div className="nav-bottom">
             <FontAwesomeIcon

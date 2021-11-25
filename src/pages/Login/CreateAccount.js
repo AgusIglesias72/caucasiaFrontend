@@ -53,8 +53,8 @@ const CreateAccount = () => {
             })
               .then((res) => res.json())
               .then((data) => {
-                localStorage.setItem("user", JSON.stringify(data));
-                window.location.href = "/ingresoExitoso";
+                sessionStorage.setItem("user", JSON.stringify(data));
+                window.location.href = "/";
               });
           } else {
             alert("El email ya existe");

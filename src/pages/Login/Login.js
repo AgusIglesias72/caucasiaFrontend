@@ -17,18 +17,26 @@ const Login = () => {
   };
 
   const handleSubmit = (e) => {
+    let i = 0;
     fetch("/api/customer/all", {
       method: "GET",
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.length > 0) {
+        data.map((item) => {
+          if (item.email === email && item.password === password) {
+            i++;
+          }
+        });
+        if (i > 0) {
           data.map((item) => {
             if (item.email === email && item.password === password) {
-              localStorage.setItem("user", JSON.stringify(item));
+              sessionStorage.setItem("user", JSON.stringify(item));
               window.location.href = "/";
             }
           });
+        } else {
+          alert("El usuario no existe");
         }
       });
   };
