@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap");
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+.img-menu {
+  margin: auto;
+  cursor: pointer;
+  width: 3rem;
+  transition: all 0.3s ease-in-out;
+}
+.img-menu:hover {
+  opacity: 0.8;
+}
+.img-cart {
+  cursor: pointer;
+  margin: auto;
+  width: 4rem;
+  transition: all 0.3s ease-in-out;
+}
+.img-cart:hover {
+  opacity: 0.8;
+}
+.img-logo {
+  width: 15rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    gap: 8rem;
+  }
+  .img-cart {
+    width: 4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    align-items: center;
+    gap: 4rem;
+  }
+  .img-cart {
+    width: 2rem;
+  }
+  .img-menu {
+    width: 2rem;
+    display: flex;
+    cursor: pointer;
+  }
+  .img-logo {
+    width: 8rem;
+  }
+}

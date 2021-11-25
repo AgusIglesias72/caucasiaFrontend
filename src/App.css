@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant Garamond", serif;
+}
+body {
+  background: url("./assets/background.svg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+}
+.App {
+  text-align: center;
+}
+
+/* filter: saturate(50%); */
+/* pointer-events: none; */
